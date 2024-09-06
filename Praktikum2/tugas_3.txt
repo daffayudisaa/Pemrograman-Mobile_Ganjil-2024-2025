@@ -1,0 +1,61 @@
+## Soal 3
+
+Rangkumlah materi dari codelab ini menjadi poin-poin penting yang dapat Anda gunakan untuk membantu proses 
+pengembangan aplikasi mobile menggunakan framework Flutter.
+** Jawaban:
+
+Dart menggabungkan kelebihan bahasa tingkat tinggi dengan fitur modern, seperti:
+- Productive tooling: Alat untuk analisis kode, plugin IDE, dan ekosistem paket yang besar.
+- Garbage collection: Mengelola memori dengan otomatis.
+- Type annotations (opsional): Memberikan keamanan dan konsistensi data.
+- Statically typed: Dengan type-safe dan type inference, bug dapat ditemukan saat kompilasi.
+- Portability: Dart bisa dikompilasi ke JavaScript, ARM, dan x86.
+
+Dart merilis versi stabilnya pada tahun 2013, dengan perubahan besar termasuk dalam rilis Dart 2.0 
+menjelang akhir 2018, yang dapat diuraikan sebagai berikut:
+- Awalnya berfokus pada pengembangan web untuk menggantikan JavaScript namun sekarang fokus pada mobile development
+- Menyelesaikan masalah pada JavaScript
+- Menawarkan performa terbaik dan alat/tools yang lebih baik untuk proyek berskala besar
+- Dengan tetap mempertahankan type annotations bersifat opsional dan menambahkan fitur OOP, Dart dapat menyeimbangkan dua fitur utama yaitu fleksibilitas dan ketangguhan.
+
+Lingkungan yang mendukung bahasa Dart perlu memperhatikan fitur-fitur penting seperti berikut:
+- Runtime systems
+- Dart core libraries
+- Garbage collectors
+
+Eksekusi kode Dart dapat beroperasi dalam dua mode:
+- Kompilasi Just-In-Time (JIT) : Source code dikompilasi sesuai kebutuhan. Dart VM memuat dan mengkompilasi kode sumber ke kode mesin asli (native).
+- Kompilasi Ahead-Of-Time (AOT) : Dart VM dan kode dikompilasi sebelumnya, VM bekerja lebih seperti sistem runtime Dart, yang menyediakan garbage collector dan metode-metode native dari Dart software development kit (SDK) pada aplikasi. 
+
+Object Orientation di Dart:
+- Didasarkan pada konsep objek yang menyimpan kedua data (disebut fields) dan kode (disebut methods)
+- Objek-objek ini dibuat dari cetak biru yang disebut class 
+- Dart memiliki fitur encapsulation, inheritance, composition, abstraction, dan polymorphism.
+
+Dart Operator:
+ a. Arithmetic operators:
+    + untuk tambahan.
+    - untuk pengurangan.
+    * untuk perkalian.
+    / untuk pembagian.
+    ~/ untuk pembagian bilangan bulat.
+    % untuk operasi modulus (sisa bagi dari bilangan bulat).
+    -expression untuk negasi (yang membalikkan suatu nilai).
+
+ b. Increment and decrement operators:
+    ++var atau var++ untuk menambah nilai variabel var sebesar 1
+    --var atau var-- untuk mengurangi nilai variabel var sebesar 1
+
+ c. Equality and relational operators
+    == untuk memeriksa apakah operan sama
+    != untuk memeriksa apakah operan berbeda
+    > memeriksa apakah operan kiri lebih besar dari operan kanan
+    < memeriksa apakah operan kiri lebih kecil dari operan kanan
+    >= memeriksa apakah operan kiri lebih besar dari atau sama dengan operan kanan
+    <= memeriksa apakah operan kiri kurang dari atau sama dengan operan kanan
+
+ d. Logical operators
+    !expression negasi atau kebalikan hasil ekspresi—yaitu, true menjadi false dan false menjadi true.
+    || menerapkan operasi logika OR antara dua ekspresi.
+    && menerapkan operasi logika AND antara dua ekspresi.
+
