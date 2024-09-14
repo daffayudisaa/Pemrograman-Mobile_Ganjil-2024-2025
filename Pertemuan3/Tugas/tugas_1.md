@@ -4,6 +4,7 @@
 **Percobaan 1**
 
 Error:
+
 ![alt text](/Pertemuan3/Praktikum/Dokumentasi/{88DDCEB3-89F5-4B3F-9A47-29659E3358DC}.png)
 
 Penjelasan: Terdapat beberapa perubahan penulisan pada praktikum yang disediakan, dimana penulisan kondisi awalnya yang diawali huruf kapital (If dan Else) saya ubah menjadi huruf kecil semua seperti if, else if, dan else sehingga program bisa dijalankan dengan baik.
@@ -15,6 +16,7 @@ Pada praktikum ini diterapkan control flows berupa if, else if, dan else. Dimana
 **Percobaan 2**
 
 Error:
+
 ![alt text](/Pertemuan3/Praktikum/Dokumentasi/{57A5073A-7181-4546-88B6-B6ED8995E9ED}.png)
 
 Penjelasan: Jika ingin menjalankan kode program dengan tetap menggunakan tipe data string untuk variabelnya, kita bisa melakukan perubahan pada syarat terjadinya sebuah kondisi, bukan mengubah tipe data dari variabel test. Selain itu duplikasi nama variabel test menyebabkan program ini tidak bisa berjalan, maka yang bisa dilakukan adalah mengganti nama salah satu variabel sehingga program dart tersebut bisa berjalan.
@@ -64,7 +66,7 @@ Error:
 
 ![alt text](/Pertemuan3/Praktikum/Dokumentasi/{3D8AC0BA-645F-4B6C-8577-591D0A1442A5}.png)
 
-Penjelasan: Pada praktikum ini akan dilakukan perulangan menggunakan for, namun jika langsung dijalankan akan terjadi error, hal ini dikarenakan pada variabel index yang penulisannya berbeda beda serta belum didefinisikan mengenai tipe datanya serta pada perulangan index tersebut tidak dilakukan increment. Jika tidak dilakukan increment pada variabel index maka akan terjadi perulangan tak terbatas (infinite loop).
+Penjelasan: Pada praktikum ini akan dilakukan perulangan menggunakan for, namun jika langsung dijalankan akan terjadi error, hal ini dikarenakan pada variabel index yang penulisannya berbeda beda, belum didefinisikan mengenai tipe datanya, serta pada perulangan index tersebut tidak dilakukan increment. Jika tidak dilakukan increment pada variabel index maka akan terjadi perulangan tak terbatas (infinite loop).
 
 ![alt text](/Pertemuan3/Praktikum/Dokumentasi/{D3E35C89-562A-4669-9605-B8DC86D97977}.png)
 
@@ -73,6 +75,7 @@ Pada program tersebut diinisailasi int index dengan nilai 10 dan diberi syarat b
 **Percobaan 2**
 
 Error:
+
 ![alt text](/Pertemuan3/Praktikum/Dokumentasi/{E342D87C-18FB-49E1-8AC8-6F40660ACACF}.png)
 
 
