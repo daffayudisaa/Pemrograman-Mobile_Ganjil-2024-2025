@@ -15,11 +15,13 @@ bool isPrima(int number) {
 }
 
 void main() {
+  print("Menampilkan bilangan prima dari 0 sampai 201:");
   for (int i = 0; i <= 201; i++) {
     if (isPrima(i)) {
       print("$i Daffa Yudisa Akbar / 2241720008");
-    } else {
-      print("$i");
     }
+    //else {
+    //   print("$i");
+    // }
   }
 }
