@@ -14,9 +14,16 @@
             print(a); // Bisa mengakses 'a' karena berada di dalam scope 'main'
         }
 
-    printA(); // Output: 10
+    printA(); 
     }
     ```
+
+    ```console
+    10
+
+    Exited.
+    ```
+
     Pada contoh ini, fungsi printA() bisa mengakses variabel a karena keduanya berada di dalam lingkup yang sama (scope dari main). Namun, nilai a tidak berubah, hanya diakses untuk dicetak.
 
 * Lexical Closures:
@@ -40,6 +47,14 @@
     increment(); // Output: 2
     }
     ```
+
+    ```console
+    1
+    2
+
+    Exited.
+    ```
+    
     Pada contoh ini, fungsi increment() adalah closure yang mengakses dan mengubah nilai counter, meskipun counter dideklarasikan di luar fungsi increment(). Closure memungkinkan increment() untuk tetap "mengingat" variabel counter dan mengubahnya meskipun lingkup asli tempat variabel itu dideklarasikan (yaitu main()) sudah selesai dieksekusi. 
 
 <br></br>

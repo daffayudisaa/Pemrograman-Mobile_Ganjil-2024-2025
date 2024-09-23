@@ -14,8 +14,13 @@ Dalam Dart, untuk mengembalikan beberapa nilai dari sebuah fungsi, kita dapat me
 
     void main() {
         var coordinates = getCoordinates();
-        print('x: ${coordinates[0]}, y: ${coordinates[1]}'); // Output: x: 5, y: 10
+        print('x: ${coordinates[0]}, y: ${coordinates[1]}'); 
     }
+    ```
+    ```console
+    x: 5, y: 10
+
+    Exited.
     ```
 
     Pada contoh ini, fungsi getCoordinates() mengembalikan dua nilai (x dan y) dalam bentuk list. Kita bisa mengakses nilainya dengan indeks.
@@ -35,6 +40,12 @@ Dalam Dart, untuk mengembalikan beberapa nilai dari sebuah fungsi, kita dapat me
         var scores = getStudentScores();
         print('Math: ${scores['Math']}, Science: ${scores['Science']}'); // Output: Math: 85, Science: 90
     }
+    ```
+
+    ```console
+    Math: 85, Science: 90
+
+    Exited.
     ```
 
     Menggunakan map memberikan fleksibilitas lebih karena kita bisa memberi nama untuk setiap nilai yang dikembalikan. Di sini, kita menggunakan map untuk mengembalikan dua nilai (mathScore dan scienceScore) dengan kunci yang dapat dikenali, seperti 'Math' dan 'Science'.
@@ -58,6 +69,12 @@ Dalam Dart, untuk mengembalikan beberapa nilai dari sebuah fungsi, kita dapat me
         Person person = getPersonInfo();
         print('Name: ${person.name}, Age: ${person.age}'); // Output: Name: Alice, Age: 25
     }
+    ```
+
+    ```console
+    Name: Daffa Yudisa A, Age: 20
+
+    Exited.
     ```
 
     Dalam contoh ini, fungsi getPersonInfo() mengembalikan objek Person yang berisi dua nilai (name dan age).

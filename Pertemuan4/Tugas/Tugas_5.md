@@ -23,6 +23,18 @@ Anonymous functions dapat memiliki parameter seperti fungsi biasa dan dapat digu
         });
     }
 ```
+
+```console
+    12
+    Number: 1
+    Number: 2
+    Number: 3
+    Number: 4
+    Number: 5
+
+    Exited.
+```
+
 * Fungsi anonim disimpan dalam variabel multiply, yang menerima dua parameter a dan b, lalu mengembalikan hasil perkalian mereka. Ketika dipanggil dengan multiply(3, 4), hasilnya adalah 12.
 
 * Fungsi anonim sebagai callback digunakan dalam metode forEach untuk mencetak setiap elemen dari daftar numbers. Setiap elemen number diproses dalam fungsi anonim yang langsung mencetak nilainya.
