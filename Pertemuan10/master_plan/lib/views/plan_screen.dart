@@ -1,7 +1,6 @@
 import 'package:flutter/rendering.dart';
 import 'package:master_plan/models/data_layer.dart';
 import 'package:master_plan/provider/plan_provider.dart';
-
 import 'package:flutter/material.dart';
 
 class PlanScreen extends StatefulWidget {
@@ -21,7 +20,6 @@ class _PlanScreenState extends State<PlanScreen> {
     super.initState();
     scrollController = ScrollController()
       ..addListener(() {
-        // Menghapus fokus hanya saat scrolling aktif, bukan saat penambahan task
         if (scrollController.position.userScrollDirection !=
             ScrollDirection.idle) {
           FocusScope.of(context).requestFocus(FocusNode());
@@ -38,7 +36,8 @@ class _PlanScreenState extends State<PlanScreen> {
       body: ValueListenableBuilder<List<Plan>>(
         valueListenable: plansNotifier,
         builder: (context, plans, child) {
-          Plan currentPlan = plans.firstWhere((p) => p.name == plan.name);
+          // Gunakan findPlan untuk mencari plan yang sesuai
+          Plan currentPlan = _findPlan(plans, plan.name);
           return Column(
             children: [
               Expanded(child: _buildList(currentPlan)),
@@ -47,10 +46,18 @@ class _PlanScreenState extends State<PlanScreen> {
           );
         },
       ),
-      floatingActionButton: _buildAddTaskButton(
-        context,
-      ),
+      floatingActionButton: _buildAddTaskButton(context),
     );
+  }
+
+  // Helper method untuk mencari plan
+  Plan _findPlan(List<Plan> plans, String name) {
+    try {
+      return plans.firstWhere((p) => p.name == name);
+    } catch (e) {
+      // Jika plan tidak ditemukan, kembalikan plan kosong atau plan default
+      return Plan(name: name, tasks: []);
+    }
   }
 
   Widget _buildAddTaskButton(BuildContext context) {
@@ -58,26 +65,31 @@ class _PlanScreenState extends State<PlanScreen> {
     return FloatingActionButton(
       child: const Icon(Icons.add),
       onPressed: () {
-        Plan currentPlan = plan;
-        int planIndex =
-            planNotifier.value.indexWhere((p) => p.name == currentPlan.name);
-        List<Task> updatedTasks = List<Task>.from(currentPlan.tasks)
-          ..add(const Task());
-        planNotifier.value = List<Plan>.from(planNotifier.value)
-          ..[planIndex] = Plan(
+        final currentPlans = List<Plan>.from(planNotifier.value);
+        final planIndex = currentPlans.indexWhere((p) => p.name == plan.name);
+
+        if (planIndex != -1) {
+          final currentPlan = currentPlans[planIndex];
+          final updatedTasks = List<Task>.from(currentPlan.tasks)
+            ..add(const Task());
+
+          currentPlans[planIndex] = Plan(
             name: currentPlan.name,
             tasks: updatedTasks,
           );
+
+          planNotifier.value = currentPlans; // Trigger rebuild
+        }
       },
     );
   }
 
-  Widget _buildList(Plan plan) {
+  Widget _buildList(Plan currentPlan) {
     return ListView.builder(
       controller: scrollController,
-      itemCount: plan.tasks.length,
+      itemCount: currentPlan.tasks.length,
       itemBuilder: (context, index) =>
-          _buildTaskTile(plan.tasks[index], index, context),
+          _buildTaskTile(currentPlan.tasks[index], index, context),
     );
   }
 
@@ -86,36 +98,54 @@ class _PlanScreenState extends State<PlanScreen> {
 
     return ListTile(
       leading: Checkbox(
-          value: task.complete,
-          onChanged: (selected) {
-            Plan currentPlan = plan;
-            int planIndex = planNotifier.value
-                .indexWhere((p) => p.name == currentPlan.name);
-            planNotifier.value = List<Plan>.from(planNotifier.value)
-              ..[planIndex] = Plan(
-                name: currentPlan.name,
-                tasks: List<Task>.from(currentPlan.tasks)
-                  ..[index] = Task(
-                    description: task.description,
-                    complete: selected ?? false,
-                  ),
+        value: task.complete,
+        onChanged: (selected) {
+          if (selected != null) {
+            final currentPlans = List<Plan>.from(planNotifier.value);
+            final planIndex =
+                currentPlans.indexWhere((p) => p.name == plan.name);
+
+            if (planIndex != -1) {
+              final currentPlan = currentPlans[planIndex];
+              final updatedTasks = List<Task>.from(currentPlan.tasks);
+
+              updatedTasks[index] = Task(
+                description: task.description,
+                complete: selected,
               );
-          }),
+
+              currentPlans[planIndex] = Plan(
+                name: currentPlan.name,
+                tasks: updatedTasks,
+              );
+
+              planNotifier.value = currentPlans; // Trigger rebuild
+            }
+          }
+        },
+      ),
       title: TextFormField(
         initialValue: task.description,
         onChanged: (text) {
-          Plan currentPlan = plan;
-          int planIndex =
-              planNotifier.value.indexWhere((p) => p.name == currentPlan.name);
-          planNotifier.value = List<Plan>.from(planNotifier.value)
-            ..[planIndex] = Plan(
-              name: currentPlan.name,
-              tasks: List<Task>.from(currentPlan.tasks)
-                ..[index] = Task(
-                  description: text,
-                  complete: task.complete,
-                ),
+          final currentPlans = List<Plan>.from(planNotifier.value);
+          final planIndex = currentPlans.indexWhere((p) => p.name == plan.name);
+
+          if (planIndex != -1) {
+            final currentPlan = currentPlans[planIndex];
+            final updatedTasks = List<Task>.from(currentPlan.tasks);
+
+            updatedTasks[index] = Task(
+              description: text,
+              complete: task.complete,
             );
+
+            currentPlans[planIndex] = Plan(
+              name: currentPlan.name,
+              tasks: updatedTasks,
+            );
+
+            planNotifier.value = currentPlans; // Trigger rebuild
+          }
         },
       ),
     );
