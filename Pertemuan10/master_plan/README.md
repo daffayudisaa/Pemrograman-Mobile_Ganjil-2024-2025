@@ -162,3 +162,60 @@ NIM : 2241720008
 
 <br></br>
 
+## Tugas Kelompok PBL
+
+![alt text](images/PBL/GithubCommit.png)
+
+1. Tambahkan class model yang dibutuhkan sesuai aplikasi PBL kelompok Anda! Bagilah tugas dengan anggota kelompok Anda untuk merancang proses state yang akan dilakukan pada aplikasi kelompok Anda. Lalu terapkan state management pada project kelompok yang telah Anda pelajari melalui praktikum ini.
+
+    **Jawab:**
+
+    * Model : mood.dart
+
+        ![alt text](images/PBL/mood.png)
+
+    * Model : user.dart
+
+        ![alt text](images/PBL/user.png)
+
+<br></br>
+
+2. Anda boleh menggunakan plugin/library pihak ketiga seperti riverpod, BLoC, provider atau lainnya untuk mengelola state pada project kelompok PBL.
+
+    **Jawab:**
+
+    * Menambahkan bloc pada project PBL
+
+        ![alt text](<images/PBL/Menginisiasi Bloc.png>)
+
+        ![alt text](images/PBL/pubscpec.png)
+
+    * Bloc:
+
+        ![alt text](images/PBL/bloc_tree.png)
+
+    * profile_bloc.dart
+
+        profile_bloc.dart berfungsi untuk mengelola logika bisnis yang terkait dengan data profil pengguna pada halaman profil di aplikasi PBL. 
+
+        ![alt text](images/PBL/profile_bloc.png)
+
+    * profile_event.dart
+
+        profile_event.dart berfungsi untuk mendefinisikan berbagai event yang akan diproses oleh ProfileBloc di halaman profil. 
+
+        ![alt text](images/PBL/profile_event.png)
+
+    * profile_state.dart
+    
+        profile_state.dart berfungsi untuk mendefinisikan state dalam pola BLoC (Business Logic Component) untuk halaman profil pengguna. Dalam BLoC, state mewakili kondisi atau status aplikasi pada suatu waktu tertentu, dan file ini menjelaskan berbagai kemungkinan state yang dapat terjadi terkait data profil pengguna.
+
+        ![alt text](images/PBL/profile_state.png)
+
+    * Penerapan pada halaman profile
+
+        ![alt text](images/PBL/profile_page.png)
+
+    * Hasil :
+
+        ![alt text](image.png)
