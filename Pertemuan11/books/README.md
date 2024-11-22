@@ -174,3 +174,12 @@ Carilah judul buku favorit Anda di Google Books, lalu ganti ID buku pada variabe
     ![alt text](images/Soal6.gif)
 
     <br></br>
+
+## Soal 7
+
+Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 7".
+
+Dengan adanya Future Group delay dari output yang dimunculkan hanya 3 detik, tidak seperti saat menggunakan future biasa yang saling tunggu. Hal ini karena Future Group akan menjalannya secara bersamaan.
+
+![alt text](images/Soal7.gif)
+
