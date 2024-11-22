@@ -13,24 +13,30 @@ class _LocationScreenState extends State<LocationScreen> {
   @override
   void initState() {
     super.initState();
-    getPosition().then((Position myPos) {
-      myPosition =
-          'Latitude: ${myPos.latitude.toString()} - Longitude: ${myPos.longitude.toString()}';
-      setState(() {
-        myPosition = myPosition;
+    Future.delayed(const Duration(seconds: 3), () {
+      getPosition().then((Position myPos) {
+        setState(() {
+          myPosition =
+              'Latitude: ${myPos.latitude.toString()} - Longitude: ${myPos.longitude.toString()}';
+          setState(() {
+            myPosition = myPosition;
+          });
+        });
       });
     });
   }
 
   @override
   Widget build(BuildContext context) {
+    final myWidget =
+        myPosition == '' ? const CircularProgressIndicator() : Text(myPosition);
+    ;
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('Current Location - Daffa Yudisa A'),
       ),
-      body: Center(
-        child: Text(myPosition),
-      ),
+      body: Center(child: myWidget),
     );
   }
 

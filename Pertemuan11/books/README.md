@@ -278,4 +278,20 @@ Tambahkan nama panggilan Anda pada tiap properti title sebagai identitas pekerja
 ![alt text](images/Soal11.png)
 
 
+<br></br>
 
+## Soal 12
+
+* Jika Anda tidak melihat animasi loading tampil, kemungkinan itu berjalan sangat cepat. Tambahkan delay pada method getPosition() dengan kode await Future.delayed(const Duration(seconds: 3));
+
+    ![alt text](images/Soal12-1.png)
+
+* Apakah Anda mendapatkan koordinat GPS ketika run di browser? Mengapa demikian?
+
+    **Jawab:**
+
+    Ketika dirun pada browser koordinat GPS tidak bisa didapatkan. Karena pada praktikum kali ini tidak ditambahkannya izin akses lokasi pada bagian web, tidak seperti emulator android yang telah diatur pada langkah 2 Praktikum 6 ini yang menambahkan izin GPS melalui androidmanifest.xml
+
+* Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 12".
+
+    ![alt text](images/Soal12.gif)
