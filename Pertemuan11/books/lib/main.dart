@@ -54,6 +54,16 @@ class _FuturePageState extends State<FuturePage> {
     return 3;
   }
 
+  Future count() async {
+    int total = 0;
+    total = await returnOneAsync();
+    total += await returnTwoAsync();
+    total += await returnThreeAsync();
+    setState(() {
+      result = total.toString();
+    });
+  }
+
   late Completer completer;
 
   Future getNumber() {
@@ -63,18 +73,12 @@ class _FuturePageState extends State<FuturePage> {
   }
 
   Future calculate() async {
-    await Future.delayed(const Duration(seconds: 5));
-    completer.complete(42);
-  }
-
-  Future count() async {
-    int total = 0;
-    total = await returnOneAsync();
-    total += await returnTwoAsync();
-    total += await returnThreeAsync();
-    setState(() {
-      result = total.toString();
-    });
+    try {
+      await Future.delayed(const Duration(seconds: 5));
+      completer.complete(42);
+    } catch (_) {
+      completer.completeError({});
+    }
   }
 
   String result = '';
@@ -110,6 +114,8 @@ class _FuturePageState extends State<FuturePage> {
                   setState(() {
                     result = value.toString();
                   });
+                }).catchError((e) {
+                  result = 'An Error Occured';
                 });
               },
               child: const Text('GO!'),

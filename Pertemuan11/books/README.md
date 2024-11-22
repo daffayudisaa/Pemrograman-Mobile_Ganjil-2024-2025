@@ -135,10 +135,42 @@ Carilah judul buku favorit Anda di Google Books, lalu ganti ID buku pada variabe
 * Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 5".
 
     ![alt text](images/Soal5.gif)
-    
+
     <br></br>
 
 ## Soal 6
 
+* Jelaskan maksud perbedaan kode langkah 2 dengan langkah 5-6 tersebut!
+
+    ```dart
+    Langkah5
+    Future calculate() async {
+        try {
+            await Future.delayed(const Duration(seconds: 5));
+            completer.complete(42);
+        } catch (_) {
+            completer.completeError({});
+        }
+    }
+
+    Langkah6
+    getNumber().then((value) {
+        setState(() {
+            result = value.toString();
+        });
+    }).catchError((e) {
+        result = 'An error occurred';
+    });
+    ```
+
+    **Jawab:**
+
+    - Langkah 2 hanya menangani hasil sukses tanpa penanganan kesalahan.
+
+    - Langkah 5-6 menambahkan penanganan kesalahan dengan try-catch dalam calculate() dan menangani hasil serta kesalahan di pemanggilan getNumber() yang ada pada elevatedbutton menggunakan then untuk hasil sukses dan catchError untuk menangani error dengan pesan "An error occurred".
+
+* Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 6".
+
+    ![alt text](images/Soal6.gif)
 
     <br></br>
