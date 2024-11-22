@@ -108,4 +108,33 @@ Carilah judul buku favorit Anda di Google Books, lalu ganti ID buku pada variabe
     ![alt text](images/Soal4.gif)
 
     <br></br>
-    
+
+## Soal 5
+
+* Jelaskan maksud kode langkah 2 tersebut!
+
+    ```dart
+    late Completer completer;
+
+    Future getNumber() {
+        completer = Completer<int>();
+        calculate();
+        return completer.future;
+    }
+
+    Future calculate() async {
+        await Future.delayed(const Duration(seconds : 5));
+        completer.complete(42);
+    }
+    ```
+
+    **Jawab:**
+
+    Kode ini membuat fungsi getNumber() yang akan menjalankan fungsi async calculate() dan mengembalikan sebuah Future. Proses pada fungsi async calculate() dilakukan secara asinkron selama 5 detik (terjadi delay selama 5 detik). Lalu Future pada fungsi getNumber() tersebut mendapatkan nilai 42 menggunakan metode completer.complete(42) yang ada di async calculate().
+
+    <br></br>
+
+## Soal 6
+
+
+    <br></br>
