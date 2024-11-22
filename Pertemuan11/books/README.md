@@ -1,16 +1,41 @@
-# books
+# Pertemuan 11 | Pemrograman Asynchronous
 
 A new Flutter project.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+Nama : Daffa Yudisa Akbar
 
-A few resources to get you started if this is your first Flutter project:
+Kelas : TI-3A
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+NIM : 2241720008
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+* Soal 1
+
+    Tambahkan nama panggilan Anda pada title app sebagai identitas hasil pekerjaan Anda.
+    
+    **Jawab:**
+
+    ![alt text](images/Soal1.png)
+
+    <br></br>
+* Soal 2
+
+    Carilah judul buku favorit Anda di Google Books, lalu ganti ID buku pada variabel path di kode tersebut. Kemudian cobalah akses di browser URI tersebut dengan lengkap seperti ini. Jika menampilkan data JSON, maka Anda telah berhasil. Lakukan capture milik Anda dan tulis di README pada laporan praktikum. Lalu lakukan commit dengan pesan "W11: Soal 2".
+
+    ![alt text](images/Soal2-1.png)
+
+    ![alt text](images/Soal2-2.png)
+
+    <br></br>
+
+* Soal 3
+    <br></br>
+
+* Soal 4
+    <br></br>
+    
+* Soal 5
+    <br></br>
