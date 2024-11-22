@@ -103,6 +103,11 @@ class _FuturePageState extends State<FuturePage> {
     });
   }
 
+  Future returnError() async {
+    await Future.delayed(const Duration(seconds: 2));
+    throw Exception('Something Terrible Happened!');
+  }
+
   String result = '';
   @override
   Widget build(BuildContext context) {
@@ -141,8 +146,20 @@ class _FuturePageState extends State<FuturePage> {
               //   });
               // },
               // Praktikum 4
+              // onPressed: () {
+              //   returnFG();
+              // },
+              // Praktikum 5
               onPressed: () {
-                returnFG();
+                returnError().then((value) {
+                  setState(() {
+                    result = 'Success';
+                  });
+                }).catchError((onError) {
+                  setState(() {
+                    result = onError.toString();
+                  });
+                }).whenComplete(() => print('Complete'));
               },
               child: const Text('GO!'),
             ),

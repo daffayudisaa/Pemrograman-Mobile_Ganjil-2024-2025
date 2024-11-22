@@ -225,3 +225,10 @@ final futures = Future.wait<int>([
 * Penggunaan FutureGroup nampak lebih banyak dan tidak sederhana tetapi akan memberikan kontrol lebih yang membantu kita untuk mengatur fungsi yang ada lebih mendetail misal untuk suatu kasus yang lebih kompleks. Dan jika tidak membutuhkan pengaturan lebih lanjut penggunaan Future.wait() yang disimpan pada suatu variabel akan memberikan hasil yang lebih optimal
 
 <br></br>
+
+## Soal 9
+Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 9".
+
+![alt text](images/Soal9-1.png)
+
+![alt text](images/Soal9-2.gif)
