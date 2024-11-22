@@ -132,6 +132,10 @@ Carilah judul buku favorit Anda di Google Books, lalu ganti ID buku pada variabe
 
     Kode ini membuat fungsi getNumber() yang akan menjalankan fungsi async calculate() dan mengembalikan sebuah Future. Proses pada fungsi async calculate() dilakukan secara asinkron selama 5 detik (terjadi delay selama 5 detik). Lalu Future pada fungsi getNumber() tersebut mendapatkan nilai 42 menggunakan metode completer.complete(42) yang ada di async calculate().
 
+* Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 5".
+
+    ![alt text](images/Soal5.gif)
+    
     <br></br>
 
 ## Soal 6
