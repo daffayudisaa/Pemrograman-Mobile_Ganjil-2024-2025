@@ -227,8 +227,50 @@ final futures = Future.wait<int>([
 <br></br>
 
 ## Soal 9
+
 Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 9".
 
 ![alt text](images/Soal9-1.png)
 
 ![alt text](images/Soal9-2.gif)
+
+<br></br>
+
+## Soal 10
+
+Panggil method handleError() tersebut di ElevatedButton, lalu run. Apa hasilnya? Jelaskan perbedaan kode langkah 1 dan 4!
+
+```dart
+Langkah1
+Future returnError() async {
+    await Future.delayed(const Duration(seconds: 2));
+    throw Exception('Something Terrible Happened!');
+}
+
+Langkah4
+Future handleError() async {
+    try {
+      await returnError();
+    } catch (error) {
+      setState(() {
+        result = error.toString();
+      });
+    } finally {
+      print('Complete');
+    }
+}
+```
+
+**Jawab:**
+
+![alt text](images/Soal10.png)
+
+Perbedaan utama antara kode pada Langkah 1 dan Langkah 4 terletak pada bagaimana error ditangani. Pada Langkah 1, fungsi returnError() hanya melemparkan sebuah exception tanpa menangani atau mengelola error tersebut. Fungsi ini tidak memiliki mekanisme untuk menangkap atau memanipulasi exception.
+
+Pada Langkah 4, fungsi handleError() memanggil returnError() di dalam blok try, yang memungkinkan pengecekan error. Jika returnError() melemparkan exception, blok catch di dalam handleError() akan menangkapnya dan melakukan penanganan dengan memperbarui tampilan UI menggunakan setState() untuk menampilkan pesan error tersebut. Selain itu, blok finally akan tetap dieksekusi setelah blok try atau catch selesai, yang mencetak 'Complete' ke konsol.
+
+<br></br>
+
+
+
+
