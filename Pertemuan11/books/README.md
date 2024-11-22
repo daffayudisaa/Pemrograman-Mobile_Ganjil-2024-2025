@@ -271,6 +271,11 @@ Pada Langkah 4, fungsi handleError() memanggil returnError() di dalam blok try, 
 
 <br></br>
 
+## Soal 11
+
+Tambahkan nama panggilan Anda pada tiap properti title sebagai identitas pekerjaan Anda.
+
+![alt text](images/Soal11.png)
 
 
 
