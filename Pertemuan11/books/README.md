@@ -183,3 +183,45 @@ Dengan adanya Future Group delay dari output yang dimunculkan hanya 3 detik, tid
 
 ![alt text](images/Soal7.gif)
 
+<br></br>
+
+## Soal 8
+
+Jelaskan maksud perbedaan kode langkah 1 dan 4!
+
+```dart
+Langkah1
+void returnFG() {
+    FutureGroup<int> futureGroup = FutureGroup<int>();
+    futureGroup.add(returnOneAsync());
+    futureGroup.add(returnTwoAsync());
+    futureGroup.add(returnThreeAsync());
+    futureGroup.close();
+    futureGroup.future.then((List<int> value) {
+      int total = 0;
+      for (var element in value) {
+        total += element;
+      }
+      setState(() {
+        result = total.toString();
+      });
+    });
+  }
+
+Langkah4
+final futures = Future.wait<int>([
+  returnOneAsync(),
+  returnTwoAsync(),
+  returnThreeAsync(),
+]);
+```
+
+**Jawab:**
+
+* Langkah 1 menggunakan FutureGroup untuk menambahkan Future satu per satu, menutup grup, dan kemudian menangani hasilnya setelah semua Future selesai. Ini lebih manual dan memerlukan lebih banyak langkah.
+
+* Langkah 4 menggunakan Future.wait(), yang lebih sederhana dan langsung, untuk menunggu beberapa Future bersamaan dan mendapatkan hasilnya dalam satu langkah.
+
+* Penggunaan FutureGroup nampak lebih banyak dan tidak sederhana tetapi akan memberikan kontrol lebih yang membantu kita untuk mengatur fungsi yang ada lebih mendetail misal untuk suatu kasus yang lebih kompleks. Dan jika tidak membutuhkan pengaturan lebih lanjut penggunaan Future.wait() yang disimpan pada suatu variabel akan memberikan hasil yang lebih optimal
+
+<br></br>
