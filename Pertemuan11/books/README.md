@@ -360,6 +360,28 @@ Tambahkan nama panggilan Anda pada tiap properti title sebagai identitas pekerja
 
     ![alt text](images/Soal16-1.png)
 
-* Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 16"\
+* Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 16"
 
     ![alt text](images/Soal16.gif)
+
+    <br></br>
+
+## Soal 17
+
+* Cobalah klik setiap button, apa yang terjadi ? Mengapa demikian ?
+
+    **Jawab:**
+
+    - Pada praktikum ini akan menampilkan layar dengan latar belakang berwarna biru secara default, dan ada sebuah tombol bertuliskan "Change Color". Ketika tombol ini ditekan, sebuah dialog akan muncul di tengah layar. Dialog tersebut berisi pesan "Please Choose a Color" dengan tiga tombol opsi warn yakni Grey, Orange, dan Teal.
+
+    - Jika salah satu tombol warna ditekan, dialog akan tertutup, dan warna yang dipilih akan dikirim kembali ke layar utama melalui fungsi Navigator.pop. Warna yang diterima kemudian disimpan dalam variabel color di dalam fungsi _showColorDialog. Fungsi setState dipanggil setelah itu untuk memperbarui UI, mengganti warna ltar belakang layar utama dengan warna yang baru dipilih.
+
+* Gantilah 3 warna pada langkah 3 dengan warna favorit Anda!
+
+    ![alt text](images/Soal17-1.png)
+
+* Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 17".
+
+    ![alt text](images/Soal17.gif)
+
+    <br></br>
