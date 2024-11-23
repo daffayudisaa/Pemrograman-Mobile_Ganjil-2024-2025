@@ -295,3 +295,19 @@ Tambahkan nama panggilan Anda pada tiap properti title sebagai identitas pekerja
 * Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 12".
 
     ![alt text](images/Soal12.gif)
+
+    <br></br>
+
+## Soal 13
+
+* Apakah ada perbedaan UI dengan praktikum sebelumnya? Mengapa demikian?
+
+    **Jawab:**
+
+    Untuk tampilan UI saat emulator dijalankan tidak ada perubahan, hal tersebut dikarenakan pada praktikum ini kita hanya mengubah proses buildingnya saja.
+
+* Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 13".
+
+    ![alt text](images/Soal13.gif)
+
+* Seperti yang Anda lihat, menggunakan FutureBuilder lebih efisien, clean, dan reactive dengan Future bersama UI.
