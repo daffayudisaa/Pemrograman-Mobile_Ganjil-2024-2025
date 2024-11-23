@@ -331,3 +331,35 @@ Tambahkan nama panggilan Anda pada tiap properti title sebagai identitas pekerja
     - Ketika GPS Tidak Diaktifkan (Error):
 
         ![alt text](images/Soal14-1.gif)
+
+    <br></br>
+
+## Soal 15
+
+* Tambahkan nama panggilan Anda pada tiap properti title sebagai identitas pekerjaan Anda.
+
+* Silakan ganti dengan warna tema favorit Anda.
+
+    ![alt text](images/Soal15.png)
+
+    <br></br>
+
+## Soal 16
+
+* Cobalah klik setiap button, apa yang terjadi ? Mengapa demikian ?
+
+    **Jawab:**
+
+    - Layar pertama bernama NavigationFirst, berfungsi sebagai titik awal aplikasi. Pada layar ini, terdapat sebuah tombol bertuliskan "Change Color" yang memungkinkan pengguna untuk berpindah ke layar kedua, yaitu NavigationSecond. 
+    
+    - NavigationSecond, menyediakan tiga tombol dengan label Red, Brown, dan Amber. Setiap tombol merepresentasikan warna tertentu yang akan dikembalikan ke layar pertama menggunakan fungsi Navigator.pop, yang juga membawa data warna yang dipilih oleh pengguna. Misalnya, jika tombol Red ditekan, warna merah dikirim kembali ke layar pertama.
+
+    - Pada layar pertama, data warna ini diterima oleh fungsi _navigateAndGetColor dan disimpan dalam variabel color. Setelah itu, setState dipanggil untuk memperbarui UI, mengubah latar belakang layar menjadi warna yang baru dipilih. 
+
+* Gantilah 3 warna pada langkah 5 dengan warna favorit Anda!
+
+    ![alt text](images/Soal16-1.png)
+
+* Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 16"\
+
+    ![alt text](images/Soal16.gif)

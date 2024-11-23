@@ -1,9 +1,9 @@
 import 'package:books/geolocation.dart';
+import 'package:books/navigation_first.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart';
 import 'package:http/http.dart' as http;
 import 'dart:async';
-import 'package:async/async.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,10 +17,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Daffa Yudisa Akbar - 2241720008',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
         useMaterial3: true,
       ),
-      home: const LocationScreen(),
+      home: const NavigationFirst(),
     );
   }
 }
