@@ -311,3 +311,23 @@ Tambahkan nama panggilan Anda pada tiap properti title sebagai identitas pekerja
     ![alt text](images/Soal13.gif)
 
 * Seperti yang Anda lihat, menggunakan FutureBuilder lebih efisien, clean, dan reactive dengan Future bersama UI.
+
+    <br></br>
+
+## Soal 14
+
+* Apakah ada perbedaan UI dengan langkah sebelumnya? Mengapa demikian?
+
+    **Jawab:**
+
+    Jika dilihat maka tidak ada tampilan UI yang berubah kecuali jika terjadi error maka akan memunculkan teks berupa 'Something terrible happened!'
+
+* Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 14".
+
+    - Ketika GPS Diaktifkan:
+
+        ![alt text](images/Soal14.gif)
+
+    - Ketika GPS Tidak Diaktifkan (Error):
+
+        ![alt text](images/Soal14-1.gif)
